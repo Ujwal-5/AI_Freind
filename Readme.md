@@ -18,7 +18,6 @@ AI Friend is a voice-activated assistant that combines speech recognition, natur
 
 - Python 3.8+
 - ffmpeg (for audio processing)
-- Linux or macOS recommended (Windows supported with limitations)
 
 ### Setup
 
@@ -34,7 +33,7 @@ AI Friend is a voice-activated assistant that combines speech recognition, natur
    ```
 
 3. Download required models:
-   - A LLM model (Qwen2.5-1.5b-instruct recommended)
+   - A LLM model (Qwen2.5-1.5b-instruct recommended[https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/tree/main])
    - TTS model will be downloaded automatically on first run
 
 ## Usage
@@ -114,10 +113,6 @@ If AI Friend can't hear you:
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
