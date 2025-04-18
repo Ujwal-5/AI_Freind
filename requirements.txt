@@ -1,0 +1,18 @@
+# Core dependencies
+numpy>=1.20.0
+SpeechRecognition>=3.8.1
+sounddevice>=0.4.4
+sentence-transformers>=2.2.2
+scikit-learn>=1.0.2
+faiss-cpu>=1.7.3
+pywhispercpp>=1.0.0
+llama-cpp-python>=0.2.0
+TTS>=0.17.0
+
+# Audio processing
+pyaudio>=0.2.11
+ffmpeg-python>=0.2.0
+
+# Utilities
+tqdm>=4.65.0
+requests>=2.28.1
