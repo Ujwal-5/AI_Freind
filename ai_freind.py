@@ -12,12 +12,10 @@ import subprocess
 import re
 import json
 from datetime import datetime, timedelta
-from sys import platform
 from TTS.api import TTS
 from pywhispercpp.model import Model
 from llama_cpp import Llama
 from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
 import faiss
 import random
 
@@ -97,15 +95,12 @@ Be aware that you have limited context, so keep your responses focused."""
         self.recorder.dynamic_energy_threshold = False
         
         # Set up microphone
-        if 'linux' in platform:
-            for index, name in enumerate(sr.Microphone.list_microphone_names()):
-                if 'pulse' in name.lower():
-                    self.source = sr.Microphone(sample_rate=16000, device_index=index)
-                    print(f"Using microphone: {name}")
-                    break
-            else:
-                self.source = sr.Microphone(sample_rate=16000)
-                print("Using default microphone")
+   
+        for index, name in enumerate(sr.Microphone.list_microphone_names()):
+            if 'pulse' in name.lower():
+                self.source = sr.Microphone(sample_rate=16000, device_index=index)
+                print(f"Using microphone: {name}")
+                break
         else:
             self.source = sr.Microphone(sample_rate=16000)
             print("Using default microphone")
